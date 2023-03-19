@@ -1,3 +1,8 @@
+#[macro_use]
+mod macros;
+
+mod day01;
+
 fn main() {
-    println!("Hello, world!");
+    run_parts!(day01);
 }
