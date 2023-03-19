@@ -128,7 +128,6 @@ pub fn part2(path: &str) -> i32 {
 
     return strategy
         .into_iter()
-        .map(|turn| (turn.0.clone(), turn.1.to_choice(turn.0)))
-        .map(|turn| turn.1.to_score(turn.0))
+        .map(|turn| turn.1.to_choice(turn.0.clone()).to_score(turn.0))
         .sum::<i32>();
 }
