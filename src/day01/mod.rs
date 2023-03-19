@@ -60,13 +60,5 @@ pub fn part2(path: &str) -> i32 {
 
     groups.sort();
 
-    let total = groups
-        .iter()
-        .rev()
-        .take(3)
-        .copied()
-        .reduce(|acc, x| acc + x)
-        .unwrap();
-
-    return total;
+    return groups.iter().rev().take(3).sum();
 }
